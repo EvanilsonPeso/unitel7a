@@ -1,0 +1,237 @@
+@media (max-width: 999px){
+    
+
+  main {
+    background: url("img/oficial.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 25%;
+  }
+
+  .foto-legenda {
+    position: absolute;
+    top: 100px;
+    color: #c3c3c3;
+    margin-left: 10px;
+    width: 250px;
+  }
+
+  .neon {
+    margin-top: 32px;
+    margin-left: 20px;
+
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-family: "Nunito", sans-serif;
+    background: #0d0e0f;
+    color: #09039e;
+
+    font-size: 12px;
+    font-weight: 350;
+    text-decoration: none;
+
+    display: inline-block;
+    color: #238bd0;
+    padding: 8px 13px;
+    border: #fff 4px solid;
+    border-radius: 10px;
+
+    box-shadow: inset 0 0 6px 0 #fff, 0 0 16px 0 #fff;
+    text-shadow: 0 0 4px hsl(0 0% 100%/0.7), 0 0 16px currentcolor;
+
+    position: absolute;
+  }
+
+  .neon::before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 0;
+
+    background: #09039e;
+    width: 50%;
+    height: 50%;
+
+    transform: perspective(32px) rotateX(4deg) scale(1, 0.35);
+    filter: blur(32px);
+    opacity: 0.7;
+    pointer-events: none;
+  }
+
+  /*estilo para o hover*/
+  .neon::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 128px 32px #09039e;
+    opacity: 0;
+    background-color: #09039e;
+    z-index: -1;
+    transition: opacity 100ms linear;
+
+  }
+
+  .neon:hover::before,
+  .neon:hover::after{
+    opacity: 1;
+  }
+
+  .neon:hover {
+    color: #31202b;
+    text-shadow: none;
+  }
+
+  #enfase {
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 25px;
+
+  }
+
+
+
+  .card_img{
+
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      margin: 15px;
+  }
+
+  .small_img{
+      margin-top: 1px;
+      height: 50%;
+      cursor: pointer;
+      transition: all linear 0.4s;
+  }
+  .small_img:hover{
+      filter: grayscale(100%);
+      transform: scale(1.1);
+  }
+
+  .row{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+  }
+
+  #modal_img{
+      width: 32vw;
+      transform: scale(0);
+      transition: all linear .3s;
+  }
+
+  .modal_active #modal_img{
+      transform: scale(1);
+  }
+  .modal{
+
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, .7);
+      position: fixed;
+      visibility: hidden;
+      z-index: 1;
+      opacity: 0;
+      transition: visibility 0.8s linear, opacity 0.5s linear;
+  }
+
+  .modal_content{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+  }
+
+  #bt_close{
+      color:#fff;
+      background-color: #000;
+      position: absolute;
+      top:10px;
+      right: 10px;
+      padding: 5px 10px;
+      font-size: 25px;
+      border:solid 1px #fff;
+      transition: all ease-out .4s;
+      cursor: pointer;
+  }
+  #bt_close:hover{
+      background-color: #f00;
+  }
+
+  .modal_active{
+      visibility: visible;
+      opacity: 1;
+
+  }
+
+    #venda {
+      margin-top: 300px;
+    }
+
+     #beneficio {
+      margin-top: 200px;
+      margin-left: 1px;
+     }
+
+
+
+ 
+
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    font-family: "Arial";
+  }
+
+  .fundo{
+     
+
+     width: 50%;
+     height: 50%;
+
+
+      background: linear-gradient(to right, midnightblue, firebrick, springgreen);
+      background-size: 250% 50%;
+
+     
+      align-items: center;
+      justify-content: center;
+
+      animation-name: background;
+      animation-duration: 5s;
+      animation-timing-function: ease-in-out;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+  }
+
+  @keyframes background{
+      0%{
+          background-position-x: 0%;
+      }
+      50%{
+          background-position-x: 50%;
+      }
+  }
+
+ 
+
+  }
+
+  #int {
+    margin-left: 5px;
+    margin-top: 50px;
+    position: absolute;
+  }
+
+  
+
+
+
+
+  }
